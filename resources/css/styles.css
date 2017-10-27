@@ -11,6 +11,10 @@ label {
     text-align: right;
 }
 
+label:after{
+  content:"";
+}
+
 label + input {
     width: 30%;
     margin: 0 30% 0 4%;
@@ -18,4 +22,12 @@ label + input {
 
 input + input {
     float: right;
+}
+
+input, select {
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
 }

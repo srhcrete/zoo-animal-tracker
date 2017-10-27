@@ -23,7 +23,7 @@ import { Animal } from './animal.model';
       <input #newLikes>
       <label>Dislikes</label>
       <input #newDislikes>
-      <label>SpeciesFamily</label>
+      <label>Species Family</label>
       <input #newSpeciesFamily>
       <label>Species</label>
       <input #newSpecies>
