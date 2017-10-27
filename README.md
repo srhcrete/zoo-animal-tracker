@@ -12,6 +12,7 @@ _Zoo Animal Tracker is an application that holds a list of animals in the zoo, i
 * `cd` into the desktop from the terminal.
 * Clone the repository [here](https://github.com/srhcrete/zoo-animal-tracker).
 * `cd` into the project directory from the terminal.
+
   ```
   cd zoo-animal-tracker
   ```
