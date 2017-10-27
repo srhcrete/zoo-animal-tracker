@@ -1,0 +1,21 @@
+input {
+  background-color: rgb(220, 224, 232);
+}
+
+label, input {
+    display: inline-block;
+}
+
+label {
+    width: 30%;
+    text-align: right;
+}
+
+label + input {
+    width: 30%;
+    margin: 0 30% 0 4%;
+}
+
+input + input {
+    float: right;
+}
