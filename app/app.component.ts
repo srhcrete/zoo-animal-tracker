@@ -4,10 +4,13 @@ import {Animal} from './animal.model'
 @Component({
   selector: 'app-root',
   template: `
-  <div class="container">
+  <div class='container'>
     <h1>Zoo Animal Tracker</h1>
     <h3>Current Date: {{month}}/{{day}}/{{year}}</h3>
-    <animal-list [childAnimalList]='masterAnimalList'></animal-list>
+    <animal-list [childAnimalList]='masterAnimalList' (clickSender)='editAnimal($event)'></animal-list>
+    <hr>
+    <edit-animal [childSelectedAnimal]='selectedAnimal'></edit-animal>
+  </div>
   `
 })
 
@@ -23,4 +26,13 @@ export class AppComponent {
     new Animal('Clark', 7, 'carnivore', 'cougar crossing', 4, 'male', 'rabbit', 'loud noises', 'big cat', 'cougar', '6/16/2012'),
     new Animal('Modoc', 16, 'herbavore', 'elephant lands', 3, 'female', 'peanuts', 'mice', 'elephant', 'elephant', '1/22/2009'),
   ];
+
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+    console.log('you have selected an animal to edit');
+  }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
+  }
 }

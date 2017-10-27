@@ -6,7 +6,7 @@ import { Animal } from './animal.model';
   template: `
   <ul>
     <li *ngFor="let currentAnimal of childAnimalList">{{currentAnimal.name}} -  {{currentAnimal.species}} <img src='{{currentAnimal.graphic}}'>
-      <button class="button" (click)="editAnimal(currentAnimal)">Edit!</button>
+      <button class="button" (click)="editAnimal(currentAnimal)">View Animal</button>
     </li>
   </ul>
   `
@@ -15,4 +15,9 @@ import { Animal } from './animal.model';
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
+
+  editAnimal(animalToEdit: Animal) {
+    this.clickSender.emit(animalToEdit);
+  }
+
 }
