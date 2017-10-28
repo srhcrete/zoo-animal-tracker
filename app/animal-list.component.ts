@@ -34,7 +34,7 @@ import { Animal } from './animal.model';
   </select>
   </div>
   <ul>
-    <li *ngFor='let currentAnimal of childAnimalList | age:agePipe | diet:DietPipe | species:SpeciesPipe'>{{currentAnimal.name}} -  {{currentAnimal.family}} <img src='{{currentAnimal.graphic}}'>
+    <li *ngFor='let currentAnimal of childAnimalList | age:agePipe | diet:dietPipe | species:speciesPipe'>{{currentAnimal.name}} -  {{currentAnimal.family}} <img src='{{currentAnimal.graphic}}'>
       <button class='button' (click)='editAnimal(currentAnimal)'>View Animal</button>
     </li>
   </ul>
